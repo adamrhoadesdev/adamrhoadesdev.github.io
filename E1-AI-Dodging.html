@@ -1,207 +1,439 @@
-DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Player Swing Simulation and Dynamic AI Dodging | Adam Rhoades</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/main.css">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+	<style>
+		/* Page-specific project layout. The main portfolio styling still comes
+		   from assets/css/main.css. */
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+		.project-hero {
+			background: #040b14;
+			color: #ffffff;
+			overflow: hidden;
+			position: relative;
+		}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+			.project-hero img {
+				display: block;
+				height: 30em;
+				object-fit: cover;
+				opacity: 0.58;
+				width: 100%;
+			}
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+			.project-hero-copy {
+				bottom: 0;
+				left: 0;
+				padding: 3.5em;
+				position: absolute;
+				width: 100%;
+			}
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+				.project-hero-copy h2 {
+					color: #ffffff;
+					font-size: 3em;
+					line-height: 1.15em;
+					margin-bottom: 0.35em;
+					max-width: 16em;
+					text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+				}
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+				.project-hero-copy p {
+					color: #dce8f8;
+					font-size: 1.15em;
+					margin: 0;
+					max-width: 42em;
+					text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+				}
+
+		.project-meta {
+			background: #f5f8fd;
+			border-left: solid 6px #149ddd;
+			display: grid;
+			gap: 1.5em;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			margin: 0 0 4em 0;
+			padding: 1.5em 2em;
+		}
+
+			.project-meta span {
+				color: #6f7180;
+				display: block;
+				font-size: 0.72em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+
+			.project-meta strong {
+				color: #173b6c;
+				display: block;
+			}
+
+		.comic-panel {
+			align-items: center;
+			border-top: solid 3px #e4edf9;
+			display: grid;
+			gap: 3em;
+			grid-template-columns: minmax(0, 1.15fr) minmax(17em, 0.85fr);
+			margin-bottom: 4em;
+			padding-top: 4em;
+		}
+
+			.comic-panel.first {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+			.comic-panel.reverse {
+				grid-template-columns: minmax(17em, 0.85fr) minmax(0, 1.15fr);
+			}
+
+				.comic-panel.reverse .comic-media {
+					order: 2;
+					transform: rotate(0.7deg);
+				}
+
+				.comic-panel.reverse .comic-copy {
+					order: 1;
+				}
+
+		.comic-media {
+			background: #040b14;
+			border: solid 5px #173b6c;
+			box-shadow: 11px 11px 0 #dce8f8;
+			padding: 0.5em;
+			transform: rotate(-0.7deg);
+		}
+
+			.comic-media img,
+			.comic-media video {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+		.comic-copy {
+			position: relative;
+		}
+
+			.comic-copy h3 {
+				font-size: 1.75em;
+				margin-bottom: 0.65em;
+			}
+
+			.comic-copy p:last-child {
+				margin-bottom: 0;
+			}
+
+		.panel-number {
+			color: #149ddd;
+			display: block;
+			font-size: 2.75em;
+			font-weight: 700;
+			line-height: 1em;
+			margin-bottom: 0.3em;
+			opacity: 0.3;
+		}
+
+		.project-result {
+			background: #173b6c;
+			border-left: solid 8px #149ddd;
+			color: #ffffff;
+			margin: 1em 0 4em 0;
+			padding: 2em 2.25em;
+		}
+
+			.project-result h3 {
+				color: #ffffff;
+			}
+
+			.project-result p {
+				color: #dce8f8;
+				margin-bottom: 0;
+			}
+
+		.project-navigation {
+			border-top: solid 3px #e4edf9;
+			padding-top: 2.5em;
+		}
+
+		@media screen and (max-width: 1024px) {
+			.project-hero img {
+				height: 25em;
+			}
+
+			.project-hero-copy {
+				padding: 2.5em;
+			}
+
+			.project-hero-copy h2 {
+				font-size: 2.5em;
+			}
+
+			.comic-panel,
+			.comic-panel.reverse {
+				gap: 2em;
+				grid-template-columns: minmax(0, 1.1fr) minmax(15em, 0.9fr);
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+			.project-hero img {
+				height: 22em;
+			}
+
+			.project-hero-copy {
+				padding: 1.75em;
+			}
+
+			.project-hero-copy h2 {
+				font-size: 2em;
+			}
+
+			.project-hero-copy p {
+				font-size: 1em;
+			}
+
+			.project-meta {
+				grid-template-columns: 1fr;
+				margin-bottom: 3em;
+			}
+
+			.comic-panel,
+			.comic-panel.reverse {
+				display: flex;
+				flex-direction: column;
+				gap: 2em;
+				margin-bottom: 3em;
+				padding-top: 3em;
+			}
+
+				.comic-panel.reverse .comic-media,
+				.comic-panel.reverse .comic-copy {
+					order: initial;
+				}
+
+			.comic-media,
+			.comic-panel.reverse .comic-media {
+				box-shadow: 7px 7px 0 #dce8f8;
+				transform: none;
+			}
+		}
+	</style>
 </head>
 
-<body>
+<body class="is-preload">
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+	<section id="header">
+		<header>
+			<span class="image avatar">
+				<img src="assets/img/profile_sq.jpg" alt="Adam Rhoades">
+			</span>
 
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="d-flex flex-column">
+			<h1 id="logo"><a href="index.html">Adam Rhoades</a></h1>
 
-    <div class="profile">
-      <img src="assets/img/profile_sq.jpg" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">Adam Rhoades</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a href="https://linkedin.com/in/adamrhoadesdev" class="linkedin"target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/adamrhoadesdev/" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
-        <a href="https://www.youtube.com/watch?v=zmdpVw_TpQg" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
-        <a href="assets/resume/Adam Rhoades 2025.pdf" class="file" target="_blank" rel="noopener noreferrer"><i class="bx bx-file-blank"></i></a>
+			<p>
+				Gameplay Engineer<br>
+				Unity • C# • C++
+			</p>
+		</header>
 
-      </div>
-    </div>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html#one">Featured Projects</a></li>
+				<li><a href="index.html#two">Dev Stats</a></li>
+				<li><a href="index.html#three">Other Projects</a></li>
+				<li><a href="index.html#four">Student Projects</a></li>
+				<li><a href="index.html#five">About</a></li>
+			</ul>
+		</nav>
 
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-  </div>
-</header><!-- End Header -->
+		<footer>
+			<ul class="icons">
+				<li><a class="icon solid fa-envelope" href="mailto:AdamRhoadesDev@gmail.com"><span class="label">Email</span></a></li>
+				<li><a class="icon brands fa-linkedin-in" href="https://linkedin.com/in/adamrhoadesdev" rel="noopener noreferrer" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid fa-file" href="assets/resume/Adam Rhoades 2026.pdf" rel="noopener noreferrer" target="_blank"><span class="label">Resume</span></a></li>
+			</ul>
+		</footer>
+	</section>
 
-  <main id="main">
+	<div id="wrapper">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+		<div id="main">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Player Swing Simulation, Hit Prediction and Dynamic AI Dodging</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Swing Prediction Dodging</li>
-          </ol>
-        </div>
+			<section id="project">
+				<div class="project-hero">
+					<img src="assets/gifs/E1_AI-Dodging.gif"
+						 alt="Player swing prediction and dynamic AI dodging">
 
-      </div>
-    </section><!-- End Breadcrumbs -->
+					<div class="project-hero-copy">
+						<h2>Player Swing Simulation and Dynamic AI Dodging</h2>
+						<p>
+							Precise weapon-path simulation and exact hit-location prediction
+							allowed enemies to evade individual strikes without abandoning
+							the player's threat area.
+						</p>
+					</div>
+				</div>
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+				<div class="container">
 
-        <div class="row gy-4">
+					<div class="project-meta">
+						<div>
+							<span>Engine</span>
+							<strong>Unity</strong>
+						</div>
+						<div>
+							<span>Team</span>
+							<strong>Endeavor One — Unannounced Project</strong>
+						</div>
+						<div>
+							<span>Implemented</span>
+							<strong>June 2024</strong>
+						</div>
+					</div>
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
+					<article class="comic-panel first">
+						<div class="comic-media">
+							<video controls preload="metadata">
+								<source src="assets/videos/E1_AI Hit Prediction and Dodging in Action.mp4"
+										type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
 
+						<div class="comic-copy">
+							<span class="panel-number">01</span>
+							<h3>The Original Problem</h3>
+							<p>
+								Our incoming-hit detection was too general. Agents knew an
+								attack was approaching, but not exactly where it would land,
+								so their safest response was to <b>dash completely away from the
+								player and leave the active combat space</b>.
+							</p>
+						</div>
+					</article>
 
+					<article class="comic-panel reverse">
+						<div class="comic-media">
+							<img src="assets/img/E1_Dodge1.jpg"
+								 alt="Simulated player weapon path predicting an exact hit location">
+						</div>
 
-                <div class="swiper-slide">
-                  <video width="100%" controls>
-                    <source src="assets/videos/E1_AI Hit Prediction and Dodging in Action.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge0.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge2.jpg" alt="">
-                </div>
+						<div class="comic-copy">
+							<span class="panel-number">02</span>
+							<h3>Predict the Exact Contact Point</h3>
+							<p>
+								I employed a nuanced simulation of the player's upcoming weapon path to predict when
+								the swing would contact an agent and the <b>exact location of that
+								impact</b>. That precision gave the AI enough information to react
+								to the threatened body area instead of treating every attack as
+								a full-body danger.
+							</p>
+						</div>
+					</article>
 
+					<article class="comic-panel">
+						<div class="comic-media">
+							<video controls preload="metadata">
+								<source src="assets/videos/E1_AI Hit Prediction and Dodging.mp4"
+										type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
 
-                <div class="swiper-slide">
-                  <video width="100%" controls>
-                    <source src="assets/videos/E1_AI Hit Prediction and Dodging.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge4.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge5.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge6.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Dodge7.jpg" alt="">
-                </div>
+						<div class="comic-copy">
+							<span class="panel-number">03</span>
+							<h3>Blend a Localized Dodge</h3>
+							<p>
+								The predicted hit location was then submitted to agents, where I had them select and blend a contextual
+								response such as a backward head tilt, left or right head dodge,
+								chest evade, or short step backward. Enemies could avoid the
+								strike while staying close enough to keep combat active.
+							</p>
+						</div>
+					</article>
 
+					<article class="comic-panel reverse">
+						<div class="comic-media">
+							<img src="assets/img/E1_Dodge6.jpg"
+								 alt="Enemy using a refined dynamic dodge animation">
+						</div>
 
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+						<div class="comic-copy">
+							<span class="panel-number">04</span>
+							<h3>Refine the Combat Timing</h3>
+							<p>
+								Iteration resolved late animation playback and improved how
+								the dodges blended into the agent's current state. We also
+								marked selected AI states as non-interruptible so the player
+								still had readable moments when an enemy could be struck
+								without automatically dodging. We also planned to add more dodge animations and directions later on in the project, to make it blend nicer.
+							</p>
+						</div>
+					</article>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Engine</strong>: Unity</li>
-                <li><strong>Team</strong>: Endeavor One - Unannounced Project </li>
-                <li><strong>Feature Implementation Date</strong>: June 2024</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Player Swing Simulation, Hit Prediction and Dynamic AI Dodging</h2>
-              <p>
-                This was a gameplay feature I developed after working closely with design. The goal was to make combat more dynamic, and give the enemies a dodge that was simple and dynamic, instead of fully jumping away from the player, and leaving the player's area of threat. 
-                <br><br>
-                This feature involves simulating the player's weapon swing path, predicting when and where an AI would be contacted, then warning the AI to blend their dodge animations to attempt to dodge the attack.
-                These dodge animations were very simple, and there would likely be more animations to blend between on a final shipped product. The animations active in this clip include a simple head tilt back, head tilt left/right, chest evade, and step backwards. 
-                There are some notable bugs and issues with the enemy's animations such as dodge animations playing late, and these issues were later resolved as is seen in the final footage video. We even adjusted the AI later on to have certain states that were marked as non-interruptible, so the player could strike at a specific moment without being dodged.
-                <br><br>
-                This feature helped make combat feel much more dynamic, and was a huge selling point for this unannounced project.
-                I also worked on the blocking and parrying mechanism, that has the AI respond in different ways based on the velocity of the player weapon when hitting the AI weapon. If you'd like to discuss either mechanic further, I'm happy to discuss them more!
-              </p>
-            </div>
-          </div>
+					<div class="project-result">
+						<h3>More Info</h3>
+						<p>
+							The feature became a major combat feature for the unannounced
+							project. I also worked on blocking and parrying behavior that
+							changed the AI response according to the velocity of the player's
+							weapon when it contacted the enemy's weapon.
+						</p>
+					</div>
 
-        </div>
+					<div class="project-navigation">
+						<a class="button alt" href="index.html#one">Back to Featured Projects</a>
+					</div>
 
-      </div>
-    </section><!-- End Portfolio Details Section -->
+				</div>
+			</section>
 
-  </main><!-- End #main -->
+		</div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+		<section id="footer">
+			<div class="container">
+				<p>
+					Email: <a href="mailto:AdamRhoadesDev@gmail.com">AdamRhoadesDev@gmail.com</a><br>
+					LinkedIn: <a href="https://linkedin.com/in/adamrhoadesdev" rel="noopener noreferrer" target="_blank">https://linkedin.com/in/adamrhoadesdev</a><br>
+					Resume: <a href="assets/resume/Adam Rhoades 2026.pdf" rel="noopener noreferrer" target="_blank">Adam Rhoades 2026</a>
+				</p>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+				<ul class="copyright">
+					<li>© Adam Rhoades. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+	</div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll("video").forEach(function (video) {
+				video.volume = 0.25;
+			});
+		});
+	</script>
 
 </body>
-
 </html>

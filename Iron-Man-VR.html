@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
+<html>
+<head>
+	<title>Marvel's Iron Man VR | Adam Rhoades</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<style>
+		/* Page-specific project layout. The main portfolio styling still comes
+		   from assets/css/main.css. */
+
+		.project-hero {
+			background: #040b14;
+			color: #ffffff;
+			overflow: hidden;
+			position: relative;
+		}
+
+			.project-hero img {
+				display: block;
+				height: 30em;
+				object-fit: cover;
+				opacity: 0.58;
+				width: 100%;
+			}
+
+			.project-hero-copy {
+				bottom: 0;
+				left: 0;
+				padding: 3.5em;
+				position: absolute;
+				width: 100%;
+			}
+
+				.project-hero-copy h2 {
+					color: #ffffff;
+					font-size: 3em;
+					line-height: 1.15em;
+					margin-bottom: 0.35em;
+					max-width: 16em;
+					text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+				}
+
+				.project-hero-copy p {
+					color: #dce8f8;
+					font-size: 1.15em;
+					margin: 0;
+					max-width: 42em;
+					text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+				}
+
+		.project-meta {
+			background: #f5f8fd;
+			border-left: solid 6px #149ddd;
+			display: grid;
+			gap: 1.5em;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			margin: 0 0 4em 0;
+			padding: 1.5em 2em;
+		}
+
+			.project-meta span {
+				color: #6f7180;
+				display: block;
+				font-size: 0.72em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+
+			.project-meta strong {
+				color: #173b6c;
+				display: block;
+			}
+
+		.comic-panel {
+			align-items: center;
+			border-top: solid 3px #e4edf9;
+			display: grid;
+			gap: 3em;
+			grid-template-columns: minmax(0, 1.15fr) minmax(17em, 0.85fr);
+			margin-bottom: 4em;
+			padding-top: 4em;
+		}
+
+			.comic-panel.first {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+			.comic-panel.reverse {
+				grid-template-columns: minmax(17em, 0.85fr) minmax(0, 1.15fr);
+			}
+
+				.comic-panel.reverse .comic-media {
+					order: 2;
+					transform: rotate(0.7deg);
+				}
+
+				.comic-panel.reverse .comic-copy {
+					order: 1;
+				}
+
+		.comic-media {
+			background: #040b14;
+			border: solid 5px #173b6c;
+			box-shadow: 11px 11px 0 #dce8f8;
+			padding: 0.5em;
+			transform: rotate(-0.7deg);
+		}
+
+			.comic-media img,
+			.comic-media video {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+		.comic-copy {
+			position: relative;
+		}
+
+			.comic-copy h3 {
+				font-size: 1.75em;
+				margin-bottom: 0.65em;
+			}
+
+			.comic-copy p:last-child {
+				margin-bottom: 0;
+			}
+
+		.panel-number {
+			color: #149ddd;
+			display: block;
+			font-size: 2.75em;
+			font-weight: 700;
+			line-height: 1em;
+			margin-bottom: 0.3em;
+			opacity: 0.3;
+		}
+
+		.project-result {
+			background: #173b6c;
+			border-left: solid 8px #149ddd;
+			color: #ffffff;
+			margin: 1em 0 4em 0;
+			padding: 2em 2.25em;
+		}
+
+			.project-result h3 {
+				color: #ffffff;
+			}
+
+			.project-result p {
+				color: #dce8f8;
+				margin-bottom: 0;
+			}
+
+		.project-navigation {
+			border-top: solid 3px #e4edf9;
+			padding-top: 2.5em;
+		}
+
+		@media screen and (max-width: 1024px) {
+			.project-hero img {
+				height: 25em;
+			}
+
+			.project-hero-copy {
+				padding: 2.5em;
+			}
+
+			.project-hero-copy h2 {
+				font-size: 2.5em;
+			}
+
+			.comic-panel,
+			.comic-panel.reverse {
+				gap: 2em;
+				grid-template-columns: minmax(0, 1.1fr) minmax(15em, 0.9fr);
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+			.project-hero img {
+				height: 22em;
+			}
+
+			.project-hero-copy {
+				padding: 1.75em;
+			}
+
+			.project-hero-copy h2 {
+				font-size: 2em;
+			}
+
+			.project-hero-copy p {
+				font-size: 1em;
+			}
+
+			.project-meta {
+				grid-template-columns: 1fr;
+				margin-bottom: 3em;
+			}
+
+			.comic-panel,
+			.comic-panel.reverse {
+				display: flex;
+				flex-direction: column;
+				gap: 2em;
+				margin-bottom: 3em;
+				padding-top: 3em;
+			}
+
+				.comic-panel.reverse .comic-media,
+				.comic-panel.reverse .comic-copy {
+					order: initial;
+				}
+
+			.comic-media,
+			.comic-panel.reverse .comic-media {
+				box-shadow: 7px 7px 0 #dce8f8;
+				transform: none;
+			}
+		}
+	
+
+		.external-project-link {
+			margin: 0 0 3.5em 0;
+			text-align: center;
+		}
+
+			.external-project-link .button {
+				height: auto;
+				line-height: 1.4em;
+				padding: 0.9em 1.5em;
+				white-space: normal;
+			}
+
+		.ironman-hero-link {
+			margin-top: 1.5em;
+		}
+
+			.ironman-hero-link .button {
+				background: #149ddd;
+				color: #ffffff !important;
+			}
+
+		.project-result.external-cta {
+			text-align: center;
+		}
+
+			.project-result.external-cta .button {
+				background: #ffffff;
+				color: #173b6c !important;
+				margin-top: 1.5em;
+			}
+</style>
+</head>
+
+<body class="is-preload">
+
+	<section id="header">
+		<header>
+			<span class="image avatar">
+				<img src="assets/img/profile_sq.jpg" alt="Adam Rhoades">
+			</span>
+
+			<h1 id="logo"><a href="index.html">Adam Rhoades</a></h1>
+
+			<p>
+				Gameplay Engineer<br>
+				Unity • C# • C++
+			</p>
+		</header>
+
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html#one">Featured Projects</a></li>
+				<li><a href="index.html#two">Dev Stats</a></li>
+				<li><a href="index.html#three">Other Projects</a></li>
+				<li><a href="index.html#four">Student Projects</a></li>
+				<li><a href="index.html#five">About</a></li>
+			</ul>
+		</nav>
+
+		<footer>
+			<ul class="icons">
+				<li><a class="icon solid fa-envelope" href="mailto:AdamRhoadesDev@gmail.com"><span class="label">Email</span></a></li>
+				<li><a class="icon brands fa-linkedin-in" href="https://linkedin.com/in/adamrhoadesdev" rel="noopener noreferrer" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid fa-file" href="assets/resume/Adam Rhoades 2026.pdf" rel="noopener noreferrer" target="_blank"><span class="label">Resume</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<div id="wrapper">
+
+		<div id="main">
+
+			<section id="project">
+				<div class="project-hero">
+					<img src="assets/img/Iron Man.webp" alt="Marvel's Iron Man VR">
+
+					<div class="project-hero-copy">
+						<h2>Marvel's Iron Man VR</h2>
+						<p>
+							Performance, stability, and production support for a shipped
+							VR title.
+						</p>
+
+						<div class="ironman-hero-link">
+							<a class="button primary"
+							   href="https://www.meta.com/experiences/marvels-iron-man-vr/5017327094985781/"
+							   target="_blank"
+							   rel="noopener noreferrer">
+								View Marvel's Iron Man VR on Meta
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+
+					<div class="project-meta">
+						<div>
+							<span>Role</span>
+							<strong>Software Engineer</strong>
+						</div>
+						<div>
+							<span>Platform</span>
+							<strong>Meta Quest 2</strong>
+						</div>
+						<div>
+							<span>Status</span>
+							<strong>Published Title</strong>
+						</div>
+					</div>
+
+					<article class="comic-panel first">
+						<div class="comic-media">
+							<img src="assets/img/Iron Man 2.webp"
+								 alt="Marvel's Iron Man VR gameplay">
+						</div>
+
+						<div class="comic-copy">
+							<span class="panel-number">01</span>
+							<h3>Memory Stability</h3>
+							<p>
+								I joined the team with under a year before the planned ship date. This was of course, during the final and most critical phase of
+								development, when stability and release-blocking issues had to
+								be resolved quickly. I <b>profiled memory usage</b> to trace assets
+								and code responsible for <b>memory leaks</b> that were eventually crashing
+								the game, improving long-session stability and preventing
+								progression-ending failures.
+							</p>
+						</div>
+					</article>
+
+					<article class="comic-panel reverse">
+						<div class="comic-media">
+							<img src="assets/img/Iron Man 3.webp"
+								 alt="Iron Man flying through a combat environment">
+						</div>
+
+						<div class="comic-copy">
+							<span class="panel-number">02</span>
+							<h3>Runtime Performance</h3>
+							<p>
+								I also employed thorough <b>performance profiling</b> to help <b>improve framerate and reduce
+								hitching</b> caused by objects loading unexpectedly during play.
+								I identified content that needed to be prewarmed so it was
+								ready before the player encountered it.
+							</p>
+						</div>
+					</article>
+
+					<article class="comic-panel">
+						<div class="comic-media">
+							<img src="assets/img/Iron Man 4.webp"
+								 alt="Marvel's Iron Man VR combat scene">
+						</div>
+
+						<div class="comic-copy">
+							<span class="panel-number">03</span>
+							<h3>Critical Bug Resolution</h3>
+							<p>
+								I <b>resolved more than 50 critical or progression-blocking
+								bugs</b> while working within an external team's production
+								pipeline. The work required moving quickly through an
+								established codebase while protecting shipped content and
+								release stability.
+							</p>
+						</div>
+					</article>
+
+					<div class="project-result">
+						<h3>Production Impact</h3>
+						<p>
+							I supported the team through the final and most critical phase of
+							development, focusing on the issues that most directly affected
+							the player's ability to finish and enjoy the game: crashes,
+							framerate, loading hitches, and progression blockers.
+						</p>
+					</div>
+
+					<div class="project-result external-cta">
+						<h3>Explore the Game</h3>
+						<p>
+							Visit the official Meta page for screenshots, trailers, platform
+							details, and current availability.
+						</p>
+
+						<a class="button"
+						   href="https://www.meta.com/experiences/marvels-iron-man-vr/5017327094985781/"
+						   target="_blank"
+						   rel="noopener noreferrer">
+							View Marvel's Iron Man VR on Meta
+						</a>
+					</div>
+
+					<div class="project-navigation">
+						<a class="button alt" href="index.html#one">Back to Featured Projects</a>
+					</div>
+
+				</div>
+			</section>
+
+		</div>
+
+		<section id="footer">
+			<div class="container">
+				<p>
+					Email: <a href="mailto:AdamRhoadesDev@gmail.com">AdamRhoadesDev@gmail.com</a><br>
+					LinkedIn: <a href="https://linkedin.com/in/adamrhoadesdev" rel="noopener noreferrer" target="_blank">https://linkedin.com/in/adamrhoadesdev</a><br>
+					Resume: <a href="assets/resume/Adam Rhoades 2026.pdf" rel="noopener noreferrer" target="_blank">Adam Rhoades 2026</a>
+				</p>
+
+				<ul class="copyright">
+					<li>© Adam Rhoades. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,192 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>One-Week Networked MOBA Prototype | Adam Rhoades</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="assets/css/main.css">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<style>
+.project-hero{background:#040b14;color:#fff;overflow:hidden;position:relative}
+.project-hero img{display:block;height:27em;object-fit:cover;opacity:.62;width:100%}
+.project-hero-copy{bottom:0;left:0;padding:3.25em;position:absolute;width:100%}
+.project-hero-copy h2{color:#fff;font-size:2.8em;line-height:1.15em;margin-bottom:.3em;max-width:18em;text-shadow:0 3px 12px rgba(0,0,0,.85)}
+.project-hero-copy p{color:#dce8f8;font-size:1.12em;margin:0;max-width:42em;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+.project-meta{background:#f5f8fd;border-left:solid 6px #149ddd;display:grid;gap:1.5em;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 3.5em;padding:1.4em 2em}
+.project-meta span{color:#6f7180;display:block;font-size:.72em;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.project-meta strong{color:#173b6c;display:block}
+.project-section{align-items:center;border-top:solid 3px #e4edf9;display:grid;gap:3em;grid-template-columns:minmax(0,1.1fr) minmax(18em,.9fr);margin-bottom:4em;padding-top:4em}
+.project-section.reverse{grid-template-columns:minmax(18em,.9fr) minmax(0,1.1fr)}
+.project-section.reverse .project-media{order:2}
+.project-section.reverse .project-copy{order:1}
+.project-media{background:#040b14;border:solid 5px #173b6c;box-shadow:10px 10px 0 #dce8f8;padding:.5em}
+.project-media img,.project-media video{display:block;height:auto;width:100%}
+.project-copy h3{font-size:1.7em;margin-bottom:.65em}
+.project-copy p{font-size:1.03em}
+.project-navigation{border-top:solid 3px #e4edf9;padding-top:2.5em}
+@media screen and (max-width:736px){
+.project-hero img{height:21em}.project-hero-copy{padding:1.75em}.project-hero-copy h2{font-size:2em}
+.project-meta{grid-template-columns:1fr}
+.project-section,.project-section.reverse{display:flex;flex-direction:column;gap:2em;margin-bottom:3em;padding-top:3em}
+.project-section.reverse .project-media,.project-section.reverse .project-copy{order:initial}
+}
+</style>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="d-flex flex-column">
-
-    <div class="profile">
-      <img src="assets/img/profile_sq.jpg" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">Adam Rhoades</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a href="https://linkedin.com/in/adamrhoadesdev" class="linkedin"target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/adamrhoadesdev/" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
-        <a href="https://www.youtube.com/watch?v=zmdpVw_TpQg" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
-        <a href="assets/resume/Adam Rhoades 2025.pdf" class="file" target="_blank" rel="noopener noreferrer"><i class="bx bx-file-blank"></i></a>
-
-      </div>
-    </div>
-
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-  </div>
-</header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>1 Week Game Jam - MOBA - Inspired by League of Legends and DoTA2</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Moba Game Jam</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-
-
-                <div class="swiper-slide">
-                  <video width="100%" controls>
-                    <source src="assets/videos/E1_1 Week MOBA Jam1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                
-                <div class="swiper-slide">
-                  <video width="100%" controls>
-                    <source src="assets/videos/E1_1 Week MOBA Jam2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Moba1.PNG" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/E1_Moba2.PNG" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Engine</strong>: Unity</li>
-                <li><strong>Team</strong>: Endeavor One - Collaborated w/ Mike Baldwin </li>
-                <li><strong>Project date</strong>: January 2025</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>1 Week Game Jam - MOBA - Inspired by League of Legends and DoTA2</h2>
-              <p>
-                In this 1 Week Game Jam project while working at E1, I worked with Mike Baldwin to practice some Networked Multiplayer in Unity.
-                We started with the Boss Room Unity Sample Project, and adapted into a Player vs Player MOBA experience.
-                This was a quick and fun project taking apart the Boss Room sample, and researching Netcode for Gameobjects.
-                <br><br>
-                This game looks very simple, but has a lot of hidden features below the hood.
-                Jungle monsters use identical respawning mechanics to DOTA2, where they respawn every minute if the spawning box is empty, meaning strategic gameplay like pulling camps to stack them is viable.
-                Kill XP is also divided similarly to how League of Legends works, with catchup xp, total xp bonuses for duo laning players, and xp amounts and level thresholds being aligned with League of Legends.
-                There's lots more to talk about this fun small project, but it successfully served its purpose helping us break down the technical viability of using Netcode for Gameobjects in future products.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<body class="is-preload">
+<section id="header">
+<header><span class="image avatar"><img src="assets/img/profile_sq.jpg" alt="Adam Rhoades"></span>
+<h1 id="logo"><a href="index.html">Adam Rhoades</a></h1><p>Gameplay Engineer<br>Unity • C# • C++</p></header>
+<nav id="nav"><ul>
+<li><a href="index.html#one">Featured Projects</a></li><li><a href="index.html#two">Dev Stats</a></li>
+<li><a href="index.html#three">Other Projects</a></li><li><a href="index.html#four">Student Projects</a></li>
+<li><a href="index.html#five">About</a></li></ul></nav>
+<footer><ul class="icons">
+<li><a class="icon solid fa-envelope" href="mailto:AdamRhoadesDev@gmail.com"><span class="label">Email</span></a></li>
+<li><a class="icon brands fa-linkedin-in" href="https://linkedin.com/in/adamrhoadesdev" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+<li><a class="icon solid fa-file" href="assets/resume/Adam Rhoades 2026.pdf" target="_blank" rel="noopener noreferrer"><span class="label">Resume</span></a></li>
+</ul></footer></section>
+<div id="wrapper"><div id="main"><section id="project">
+<div class="project-hero"><img src="assets/gifs/E1_Moba.gif" alt="One-Week Networked MOBA Prototype">
+<div class="project-hero-copy"><h2>One-Week Networked MOBA Prototype</h2><p>A rapid multiplayer prototype built to evaluate Unity Netcode for GameObjects.</p></div></div>
+<div class="container">
+<div class="project-meta">
+<div><span>Engine</span><strong>Unity</strong></div>
+<div><span>Team</span><strong>Endeavor One — Collaborated with Mike Baldwin</strong></div>
+<div><span>Date</span><strong>January 2025</strong></div>
+</div>
+<article class="project-section">
+<div class="project-media"><video controls preload="metadata"><source src="assets/videos/E1_1 Week MOBA Jam1.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+<div class="project-copy"><h3>Evaluating Networked Multiplayer</h3><p>I worked with Mike Baldwin during a one-week game jam to evaluate Unity&#x27;s Netcode for GameObjects. We began with Unity&#x27;s Boss Room sample and transformed it into a player-versus-player MOBA prototype, using the exercise to understand the sample architecture, networked agents, and the practical limits of the technology for future projects.</p></div>
+</article><article class="project-section reverse">
+<div class="project-media"><img src="assets/img/E1_Moba1.PNG" alt="One-Week Networked MOBA Prototype still image"></div>
+<div class="project-copy"><h3>Systems Beneath the Prototype</h3><p>Although the presentation was intentionally simple, the prototype included fully networked combat and agents, jungle camps that respawned every minute when their spawn box was empty, camp stacking, shared kill experience, catch-up experience, duo-lane bonuses, and level thresholds modeled after established MOBAs. The goal was not visual polish; it was to test whether the networking stack could support the systems expected in a competitive multiplayer game.</p></div>
+</article>
+<div class="project-navigation"><a class="button alt" href="index.html#three">Back to Other Projects</a></div>
+</div></section></div>
+<section id="footer"><div class="container"><p>
+Email: <a href="mailto:AdamRhoadesDev@gmail.com">AdamRhoadesDev@gmail.com</a><br>
+LinkedIn: <a href="https://linkedin.com/in/adamrhoadesdev" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/adamrhoadesdev</a><br>
+Resume: <a href="assets/resume/Adam Rhoades 2026.pdf" target="_blank" rel="noopener noreferrer">Adam Rhoades 2026</a>
+</p><ul class="copyright"><li>© Adam Rhoades. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li></ul></div></section>
+</div>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script><script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("video").forEach(function(video){video.volume=.25;});});</script>
+</body></html>

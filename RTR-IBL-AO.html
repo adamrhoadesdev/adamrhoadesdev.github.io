@@ -1,182 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Image-Based Lighting and Ambient Occlusion | Adam Rhoades</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="assets/css/main.css">
 
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<style>
+.project-hero{background:#040b14;color:#fff;overflow:hidden;position:relative}
+.project-hero img{display:block;height:27em;object-fit:cover;opacity:.62;width:100%}
+.project-hero-copy{bottom:0;left:0;padding:3.25em;position:absolute;width:100%}
+.project-hero-copy h2{color:#fff;font-size:2.8em;line-height:1.15em;margin-bottom:.3em;max-width:18em;text-shadow:0 3px 12px rgba(0,0,0,.85)}
+.project-hero-copy p{color:#dce8f8;font-size:1.12em;margin:0;max-width:42em;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+.project-meta{background:#f5f8fd;border-left:solid 6px #149ddd;display:grid;gap:1.5em;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 3.5em;padding:1.4em 2em}
+.project-meta span{color:#6f7180;display:block;font-size:.72em;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.project-meta strong{color:#173b6c;display:block}
+.project-section{align-items:center;border-top:solid 3px #e4edf9;display:grid;gap:3em;grid-template-columns:minmax(0,1.1fr) minmax(18em,.9fr);margin-bottom:4em;padding-top:4em}
+.project-section.reverse{grid-template-columns:minmax(18em,.9fr) minmax(0,1.1fr)}
+.project-section.reverse .project-media{order:2}
+.project-section.reverse .project-copy{order:1}
+.project-media{background:#040b14;border:solid 5px #173b6c;box-shadow:10px 10px 0 #dce8f8;padding:.5em}
+.project-media img,.project-media video{display:block;height:auto;width:100%}
+.project-copy h3{font-size:1.7em;margin-bottom:.65em}
+.project-copy p{font-size:1.03em}
+.project-navigation{border-top:solid 3px #e4edf9;padding-top:2.5em}
+@media screen and (max-width:736px){
+.project-hero img{height:21em}.project-hero-copy{padding:1.75em}.project-hero-copy h2{font-size:2em}
+.project-meta{grid-template-columns:1fr}
+.project-section,.project-section.reverse{display:flex;flex-direction:column;gap:2em;margin-bottom:3em;padding-top:3em}
+.project-section.reverse .project-media,.project-section.reverse .project-copy{order:initial}
+}
+</style>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="d-flex flex-column">
-
-    <div class="profile">
-      <img src="assets/img/profile_sq.jpg" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">Adam Rhoades</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a href="https://linkedin.com/in/adamrhoadesdev" class="linkedin"target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/adamrhoadesdev/" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
-        <a href="https://www.youtube.com/watch?v=zmdpVw_TpQg" class="github" target="_blank" rel="noopener noreferrer"><i class="bx bxl-youtube"></i></a>
-        <a href="assets/resume/Adam Rhoades 2025.pdf" class="file" target="_blank" rel="noopener noreferrer"><i class="bx bx-file-blank"></i></a>
-
-      </div>
-    </div>
-
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-  </div>
-</header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Image-Based Lighting and Ambient Occlusion</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>IBL and AO</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-
-
-                <div class="swiper-slide">
-                  <img src="assets/img/RTR-IBL-AO1.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/RTR-IBL-AO2.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/RTR-IBL-AO3.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <video width="100%" height="100%" controls>
-                    <source src="assets/videos/RTR-IBL-AO.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Engine</strong>: Custom OpenGL Framework</li>
-                <li><strong>Team</strong>: Adam Rhoades</li>
-                <li><strong>Project date</strong>: April 2021</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Image-Based Lighting and Ambient Occlusion</h2>
-              <p>
-                Project 3&4 from CS 562 - Real Time Rendering
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+<body class="is-preload">
+<section id="header">
+<header><span class="image avatar"><img src="assets/img/profile_sq.jpg" alt="Adam Rhoades"></span>
+<h1 id="logo"><a href="index.html">Adam Rhoades</a></h1><p>Gameplay Engineer<br>Unity • C# • C++</p></header>
+<nav id="nav"><ul>
+<li><a href="index.html#one">Featured Projects</a></li><li><a href="index.html#two">Dev Stats</a></li>
+<li><a href="index.html#three">Other Projects</a></li><li><a href="index.html#four">Student Projects</a></li>
+<li><a href="index.html#five">About</a></li></ul></nav>
+<footer><ul class="icons">
+<li><a class="icon solid fa-envelope" href="mailto:AdamRhoadesDev@gmail.com"><span class="label">Email</span></a></li>
+<li><a class="icon brands fa-linkedin-in" href="https://linkedin.com/in/adamrhoadesdev" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+<li><a class="icon solid fa-file" href="assets/resume/Adam Rhoades 2026.pdf" target="_blank" rel="noopener noreferrer"><span class="label">Resume</span></a></li>
+</ul></footer></section>
+<div id="wrapper"><div id="main"><section id="project">
+<div class="project-hero"><img src="assets/img/RTR-IBL-AO3.png" alt="Image-Based Lighting and Ambient Occlusion">
+<div class="project-hero-copy"><h2>Image-Based Lighting and Ambient Occlusion</h2><p>Advanced real-time rendering implemented in a custom OpenGL framework.</p></div></div>
+<div class="container">
+<div class="project-meta">
+<div><span>Engine</span><strong>Custom OpenGL Framework</strong></div>
+<div><span>Team</span><strong>Solo Project</strong></div>
+<div><span>Date</span><strong>Student Rendering Project</strong></div>
+</div>
+<article class="project-section">
+<div class="project-media"><video controls preload="metadata"><source src="assets/videos/RTR-IBL-AO.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+<div class="project-copy"><h3>Image-Based Lighting</h3><p>I implemented image-based lighting in a custom OpenGL framework to use environmental information as part of the scene&#x27;s illumination. This produced more natural reflections and lighting response than relying only on direct local lights.</p></div>
+</article><article class="project-section reverse">
+<div class="project-media"><img src="assets/img/RTR-IBL-AO1.png" alt="Image-Based Lighting and Ambient Occlusion still image"></div>
+<div class="project-copy"><h3>Ambient Occlusion</h3><p>I also implemented ambient occlusion to darken areas where surrounding geometry blocks ambient light. Combining the two techniques improved depth, contact, and the overall readability of the rendered scene.</p></div>
+</article>
+<div class="project-navigation"><a class="button alt" href="index.html#four">Back to Student Projects</a></div>
+</div></section></div>
+<section id="footer"><div class="container"><p>
+Email: <a href="mailto:AdamRhoadesDev@gmail.com">AdamRhoadesDev@gmail.com</a><br>
+LinkedIn: <a href="https://linkedin.com/in/adamrhoadesdev" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/adamrhoadesdev</a><br>
+Resume: <a href="assets/resume/Adam Rhoades 2026.pdf" target="_blank" rel="noopener noreferrer">Adam Rhoades 2026</a>
+</p><ul class="copyright"><li>© Adam Rhoades. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li></ul></div></section>
+</div>
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script><script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("video").forEach(function(video){video.volume=.25;});});</script>
+</body></html>
