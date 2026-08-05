@@ -1709,7 +1709,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
-		width: 54em;
+		width: 60em;
 	}
 
 		.container.xsmall {
@@ -2200,7 +2200,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			height: 32em;
+			height: 35em;
 			border-radius: 0;
 			overflow: hidden;
 		}
