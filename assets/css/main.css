@@ -3657,6 +3657,13 @@ input, select, textarea {
 
 	}
 
+	.cropped-image {
+		width: 1366px;        /* Set your target width */
+		height: 200px;       /* Set your target height */
+		object-fit: cover;   /* Crops the image to fill the box without distortion */
+		object-position: center; /* Keeps the focus in the center (default) */
+	}
+
 /* XSmall */
 
 	@media screen and (max-width: 480px) {

@@ -320,9 +320,9 @@
 							<span class="panel-number">01</span>
 							<h3>Make the Hit Feel Lodged</h3>
 							<p>
-								The goal was to make weapon penetration feel substantial
-								instead of allowing the player to immediately repeat attacks.
-								After impact, the sword remained embedded and resisted the
+								Our design team's <b>goal was to make weapon penetration feel substantial
+								and slow</b> instead of allowing the player to immediately repeat attacks.
+								My goal was for the sword to remain embedded after impact, and lightly resist the
 								player's attempt to pull it free.
 							</p>
 						</div>
@@ -338,10 +338,10 @@
 							<span class="panel-number">02</span>
 							<h3>Centralized Player Feedback</h3>
 							<p>
-								The penetration system used my centralized player-feedback
-								pipeline to coordinate sound, visual effects, haptics, debris,
-								and decals. Their creation and cleanup were managed from one
-								place so every impact delivered a consistent response.
+								The penetration system heavily relied on <b>my custom centralized player-feedback
+								pipeline</b> to coordinate <b>sound, visual effects, haptics, debris,
+								and decals</b>. Their creation and cleanup were all managed by this system,
+								so every impact was delivered consistently, with full lifecycle peace of mind.
 							</p>
 						</div>
 					</article>
@@ -356,8 +356,8 @@
 							<span class="panel-number">03</span>
 							<h3>Directional Pull-Out Resistance</h3>
 							<p>
-								Resistance changed according to the direction and angle
-								of the player's pull. Pulling back along a plausible exit
+								I <b>dynamically adjusted pull-out resistance according to the direction and angle
+								of the player's pull</b>. Pulling back along a plausible exit
 								path was easier than forcing the weapon sideways through
 								the target.
 							</p>
@@ -374,9 +374,9 @@
 							<span class="panel-number">04</span>
 							<h3>Rotational Freedom</h3>
 							<p>
-								The system was expanded so the player could rotate the
-								weapon while it remained embedded. This preserved physical
-								interaction without locking the hand to a rigid authored pose.
+								The system was expanded so the player could even <b>rotate the
+								weapon while it remained embedded</b>. This preserved physical
+								interaction without locking the hand to a rigid awkward pose.
 							</p>
 						</div>
 					</article>
@@ -394,10 +394,10 @@
 							<span class="panel-number">05</span>
 							<h3>Agent Integration</h3>
 							<p>
-								I developed the feature in close collaboration with design
-								and the AI team, then validated it on a basic enemy agent.
+								I developed the feature in <b>close collaboration with the design
+								and AI teams</b>, then validated it on a basic enemy agent.
 								The interaction was inspired by the weight and satisfaction
-								of embedded weapons in <i>The Walking Dead: Saints &amp; Sinners</i>,
+								of embedded weapons in <b><i>The Walking Dead: Saints &amp; Sinners</i></b>,
 								while remaining fully dynamic rather than relying on authored
 								stab points.
 							</p>
