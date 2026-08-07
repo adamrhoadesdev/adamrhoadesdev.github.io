@@ -12,224 +12,38 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 
 	<style>
-		/* Page-specific project layout. The main portfolio styling still comes
-		   from assets/css/main.css. */
-
-		.project-hero {
-			background: #040b14;
-			color: #ffffff;
-			overflow: hidden;
-			position: relative;
-		}
-
-			.project-hero img {
-				display: block;
-				height: 30em;
-				object-fit: cover;
-				opacity: 0.58;
-				width: 100%;
-			}
-
-			.project-hero-copy {
-				bottom: 0;
-				left: 0;
-				padding: 3.5em;
-				position: absolute;
-				width: 100%;
-			}
-
-				.project-hero-copy h2 {
-					color: #ffffff;
-					font-size: 3em;
-					line-height: 1.15em;
-					margin-bottom: 0.35em;
-					max-width: 16em;
-					text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
-				}
-
-				.project-hero-copy p {
-					color: #dce8f8;
-					font-size: 1.15em;
-					margin: 0;
-					max-width: 42em;
-					text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-				}
-
-		.project-meta {
-			background: #f5f8fd;
-			border-left: solid 6px #149ddd;
-			display: grid;
-			gap: 1.5em;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			margin: 0 0 4em 0;
-			padding: 1.5em 2em;
-		}
-
-			.project-meta span {
-				color: #6f7180;
-				display: block;
-				font-size: 0.72em;
-				font-weight: 700;
-				letter-spacing: 0.12em;
-				text-transform: uppercase;
-			}
-
-			.project-meta strong {
-				color: #173b6c;
-				display: block;
-			}
-
-		.comic-panel {
-			align-items: center;
-			border-top: solid 3px #e4edf9;
-			display: grid;
-			gap: 3em;
-			grid-template-columns: minmax(0, 1.15fr) minmax(17em, 0.85fr);
-			margin-bottom: 4em;
-			padding-top: 4em;
-		}
-
-			.comic-panel.first {
-				border-top: 0;
-				padding-top: 0;
-			}
-
-			.comic-panel.reverse {
-				grid-template-columns: minmax(17em, 0.85fr) minmax(0, 1.15fr);
-			}
-
-				.comic-panel.reverse .comic-media {
-					order: 2;
-					transform: rotate(0.7deg);
-				}
-
-				.comic-panel.reverse .comic-copy {
-					order: 1;
-				}
-
-		.comic-media {
-			background: #040b14;
-			border: solid 5px #173b6c;
-			box-shadow: 11px 11px 0 #dce8f8;
-			padding: 0.5em;
-			transform: rotate(-0.7deg);
-		}
-
-			.comic-media img,
-			.comic-media video {
-				display: block;
-				height: auto;
-				width: 100%;
-			}
-
-		.comic-copy {
-			position: relative;
-		}
-
-			.comic-copy h3 {
-				font-size: 1.75em;
-				margin-bottom: 0.65em;
-			}
-
-			.comic-copy p:last-child {
-				margin-bottom: 0;
-			}
-
-		.panel-number {
-			color: #149ddd;
-			display: block;
-			font-size: 2.75em;
-			font-weight: 700;
-			line-height: 1em;
-			margin-bottom: 0.3em;
-			opacity: 0.3;
-		}
-
-		.project-result {
-			background: #173b6c;
-			border-left: solid 8px #149ddd;
-			color: #ffffff;
-			margin: 1em 0 4em 0;
-			padding: 2em 2.25em;
-		}
-
-			.project-result h3 {
-				color: #ffffff;
-			}
-
-			.project-result p {
-				color: #dce8f8;
-				margin-bottom: 0;
-			}
-
-		.project-navigation {
-			border-top: solid 3px #e4edf9;
-			padding-top: 2.5em;
-		}
-
-		@media screen and (max-width: 1024px) {
-			.project-hero img {
-				height: 25em;
-			}
-
-			.project-hero-copy {
-				padding: 2.5em;
-			}
-
-			.project-hero-copy h2 {
-				font-size: 2.5em;
-			}
-
-			.comic-panel,
-			.comic-panel.reverse {
-				gap: 2em;
-				grid-template-columns: minmax(0, 1.1fr) minmax(15em, 0.9fr);
-			}
-		}
-
-		@media screen and (max-width: 736px) {
-			.project-hero img {
-				height: 22em;
-			}
-
-			.project-hero-copy {
-				padding: 1.75em;
-			}
-
-			.project-hero-copy h2 {
-				font-size: 2em;
-			}
-
-			.project-hero-copy p {
-				font-size: 1em;
-			}
-
-			.project-meta {
-				grid-template-columns: 1fr;
-				margin-bottom: 3em;
-			}
-
-			.comic-panel,
-			.comic-panel.reverse {
-				display: flex;
-				flex-direction: column;
-				gap: 2em;
-				margin-bottom: 3em;
-				padding-top: 3em;
-			}
-
-				.comic-panel.reverse .comic-media,
-				.comic-panel.reverse .comic-copy {
-					order: initial;
-				}
-
-			.comic-media,
-			.comic-panel.reverse .comic-media {
-				box-shadow: 7px 7px 0 #dce8f8;
-				transform: none;
-			}
-		}
-	</style>
+.project-hero{background:#040b14;color:#fff;overflow:hidden;position:relative}
+.project-hero img{display:block;height:30em;object-fit:cover;opacity:.58;width:100%}
+.project-hero-copy{bottom:0;left:0;padding:3.5em;position:absolute;width:100%}
+.project-hero-copy h2{color:#fff;font-size:3em;line-height:1.15em;margin-bottom:.35em;max-width:18em;text-shadow:0 3px 12px rgba(0,0,0,.8)}
+.project-hero-copy p{color:#dce8f8;font-size:1.15em;margin:0;max-width:42em;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+.project-meta{background:#f5f8fd;border-left:solid 6px #149ddd;display:grid;gap:1.5em;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 4em;padding:1.5em 2em}
+.project-meta span{color:#6f7180;display:block;font-size:.72em;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.project-meta strong{color:#173b6c;display:block}
+.project-section,.comic-panel{align-items:center;border-top:solid 3px #e4edf9;display:grid;gap:3em;grid-template-columns:minmax(0,1.15fr) minmax(17em,.85fr);margin-bottom:4em;padding-top:4em}
+.project-section:first-of-type,.comic-panel.first{border-top:0;padding-top:0}
+.project-section.reverse,.comic-panel.reverse{grid-template-columns:minmax(17em,.85fr) minmax(0,1.15fr)}
+.project-section.reverse .project-media,.comic-panel.reverse .comic-media{order:2}
+.project-section.reverse .project-copy,.comic-panel.reverse .comic-copy{order:1}
+.project-media,.comic-media{background:#fff;border:solid 1px #d7e0eb;border-radius:.35em;box-shadow:0 .8em 2em rgba(23,59,108,.1);overflow:hidden}
+.project-media img,.project-media video,.comic-media img,.comic-media video{display:block;height:auto;width:100%}
+.project-copy,.comic-copy{position:relative}
+.project-copy h3,.comic-copy h3{font-size:1.75em;margin-bottom:.65em}
+.project-copy p:last-child,.comic-copy p:last-child{margin-bottom:0}
+.panel-number{display:none}
+.project-result{background:#f5f8fd;border-left:solid 6px #149ddd;color:inherit;margin:1em 0 4em;padding:2em 2.25em}
+.project-result h3{color:#173b6c}
+.project-result p{color:inherit;margin-bottom:0}
+.project-navigation{border-top:solid 3px #e4edf9;padding-top:2.5em}
+.external-project-link{margin:0 0 3.5em;text-align:center}
+.external-project-link .button{height:auto;line-height:1.4em;padding:.9em 1.5em;white-space:normal}
+.ironman-hero-link{margin-top:1.5em}
+.ironman-hero-link .button{background:#149ddd;color:#fff!important}
+.project-result.external-cta{text-align:center}
+.project-result.external-cta .button{background:#173b6c;color:#fff!important;margin-top:1.5em}
+@media screen and (max-width:1024px){.project-hero img{height:25em}.project-hero-copy{padding:2.5em}.project-hero-copy h2{font-size:2.5em}.project-section,.project-section.reverse,.comic-panel,.comic-panel.reverse{gap:2em;grid-template-columns:minmax(0,1.1fr) minmax(15em,.9fr)}}
+@media screen and (max-width:736px){.project-hero img{height:22em}.project-hero-copy{padding:1.75em}.project-hero-copy h2{font-size:2em}.project-hero-copy p{font-size:1em}.project-meta{grid-template-columns:1fr;margin-bottom:3em}.project-section,.project-section.reverse,.comic-panel,.comic-panel.reverse{display:flex;flex-direction:column;gap:2em;margin-bottom:3em;padding-top:3em}.project-section.reverse .project-media,.project-section.reverse .project-copy,.comic-panel.reverse .comic-media,.comic-panel.reverse .comic-copy{order:initial}}
+</style>
 </head>
 
 <body class="is-preload">

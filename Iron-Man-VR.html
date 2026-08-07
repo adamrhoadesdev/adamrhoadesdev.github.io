@@ -100,7 +100,6 @@
 
 				.comic-panel.reverse .comic-media {
 					order: 2;
-					transform: rotate(0.7deg);
 				}
 
 				.comic-panel.reverse .comic-copy {
@@ -108,11 +107,11 @@
 				}
 
 		.comic-media {
-			background: #040b14;
-			border: solid 5px #173b6c;
-			box-shadow: 11px 11px 0 #dce8f8;
-			padding: 0.5em;
-			transform: rotate(-0.7deg);
+			background: #ffffff;
+			border: solid 1px #d7e0eb;
+			border-radius: 0.35em;
+			box-shadow: 0 0.8em 2em rgba(23, 59, 108, 0.10);
+			overflow: hidden;
 		}
 
 			.comic-media img,
@@ -136,29 +135,23 @@
 			}
 
 		.panel-number {
-			color: #149ddd;
-			display: block;
-			font-size: 2.75em;
-			font-weight: 700;
-			line-height: 1em;
-			margin-bottom: 0.3em;
-			opacity: 0.3;
+			display: none;
 		}
 
 		.project-result {
-			background: #173b6c;
-			border-left: solid 8px #149ddd;
-			color: #ffffff;
+			background: #f5f8fd;
+			border-left: solid 6px #149ddd;
+			color: inherit;
 			margin: 1em 0 4em 0;
 			padding: 2em 2.25em;
 		}
 
 			.project-result h3 {
-				color: #ffffff;
+				color: #173b6c;
 			}
 
 			.project-result p {
-				color: #dce8f8;
+				color: inherit;
 				margin-bottom: 0;
 			}
 
@@ -166,6 +159,37 @@
 			border-top: solid 3px #e4edf9;
 			padding-top: 2.5em;
 		}
+
+		.external-project-link {
+			margin: 0 0 3.5em 0;
+			text-align: center;
+		}
+
+			.external-project-link .button {
+				height: auto;
+				line-height: 1.4em;
+				padding: 0.9em 1.5em;
+				white-space: normal;
+			}
+
+		.ironman-hero-link {
+			margin-top: 1.5em;
+		}
+
+			.ironman-hero-link .button {
+				background: #149ddd;
+				color: #ffffff !important;
+			}
+
+		.project-result.external-cta {
+			text-align: center;
+		}
+
+			.project-result.external-cta .button {
+				background: #173b6c;
+				color: #ffffff !important;
+				margin-top: 1.5em;
+			}
 
 		@media screen and (max-width: 1024px) {
 			.project-hero img {
@@ -222,46 +246,9 @@
 				.comic-panel.reverse .comic-copy {
 					order: initial;
 				}
-
-			.comic-media,
-			.comic-panel.reverse .comic-media {
-				box-shadow: 7px 7px 0 #dce8f8;
-				transform: none;
-			}
 		}
-	
+	</style>
 
-		.external-project-link {
-			margin: 0 0 3.5em 0;
-			text-align: center;
-		}
-
-			.external-project-link .button {
-				height: auto;
-				line-height: 1.4em;
-				padding: 0.9em 1.5em;
-				white-space: normal;
-			}
-
-		.ironman-hero-link {
-			margin-top: 1.5em;
-		}
-
-			.ironman-hero-link .button {
-				background: #149ddd;
-				color: #ffffff !important;
-			}
-
-		.project-result.external-cta {
-			text-align: center;
-		}
-
-			.project-result.external-cta .button {
-				background: #ffffff;
-				color: #173b6c !important;
-				margin-top: 1.5em;
-			}
-</style>
 </head>
 
 <body class="is-preload">
